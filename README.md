@@ -61,7 +61,3 @@ The approach takes advantage of Mux's [Direct Upload API](https://docs.mux.com/g
 The backend is a very simple Django app which uses [mux-python](https://github.com/muxinc/mux-python) - the official client library for Python maintained by Mux.
 
 The frontend was created using Create React App, Typescript, and Tailwind CSS. The main components are the `VideoPlayer`, `VideoRecorder` (which does most of the heavy lifting), and the `RecordingList` which simply renders a list assets uploaded to Mux.
-
-# Comments
-
-This was a fun challenge. I recently used Mux for a project, so I was a somewhat familiar with their API. I needed to install an additional library [Hls.js](https://github.com/video-dev/hls.js/) to play uploaded streams in the browser. I kept it simple, but with more time I could add more UX flourish, animations, etc. The backend is about as simple a Django app as you could possibly have. There are two endpoints: `GET /mux/upload-url/` and `GET /mux/assets/`, used for generating generating upload URLs and fetching uploaded assets.
